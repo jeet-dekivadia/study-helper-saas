@@ -23,8 +23,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const buffer = await fs.promises.readFile(file.filepath)
     const content = await parsePDF(buffer)
 
-    // Save to database logic here if needed
-
     res.status(200).json({ content })
   })
 }
