@@ -1,9 +1,9 @@
-import { ReactNode } from 'react'
+import React from 'react'
 
-const Layout = ({ children }: { children: ReactNode }) => {
+const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <div className="container mx-auto p-4">
-      {children}
+    <div className="min-h-screen bg-gray-100 p-4">
+      <main>{children}</main>
     </div>
   )
 }
